@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.invoiceDetailController">
+   <children>
+      <Text layoutX="10.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order ID #">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="orderID" layoutX="98.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="161.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="13.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="12.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order Date:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="15.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="13.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="14.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="10.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Items :" wrappingWidth="88.3828125">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <TableView fx:id="orderDetailTableView" layoutX="10.0" layoutY="212.0" prefHeight="165.0" prefWidth="326.0">
+        <columns>
+          <TableColumn fx:id="item" prefWidth="102.0" text="Item" />
+          <TableColumn fx:id="price" prefWidth="91.0" text="Price" />
+            <TableColumn fx:id="qty" prefWidth="40.0" text="Qty" />
+            <TableColumn fx:id="subtotal" prefWidth="92.0" text="Subtotal" />
+        </columns>
+      </TableView>
+      <Text layoutX="13.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="orderDate" layoutX="90.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="177.81054079532623">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="custName" layoutX="88.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="209.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="custPhoneNum" layoutX="119.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="177.810546875">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="custAddress" layoutX="79.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="248.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="totalPrice" layoutX="59.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="216.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="payCategory" layoutX="79.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="209.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

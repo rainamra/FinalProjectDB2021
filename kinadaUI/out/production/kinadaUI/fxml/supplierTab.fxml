@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="400.0" prefWidth="607.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.supplierTabController">
+        <children>
+        <ScrollPane layoutY="50.0" prefHeight="256.0" prefWidth="607.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="46.0">
+        <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="400.0" prefWidth="607.0">
+            <children>
+                  <TableView fx:id="supplierTableView" onMouseClicked="#toIngredientDetail" prefHeight="400.0" prefWidth="607.0">
+                    <columns>
+                      <TableColumn fx:id="supplierName" prefWidth="146.52663683891296" text="Supplier" />
+                      <TableColumn fx:id="phoneNum" prefWidth="144.47332763671875" text="Phone Number" />
+                        <TableColumn fx:id="address" prefWidth="233.47332763671875" text="Address" />
+                    </columns>
+                  </TableView>
+            </children>
+        </AnchorPane>
+        </content>
+        </ScrollPane>
+            <Label layoutY="14.0" text="Search:" />
+            <TextField fx:id="search_supplier" layoutX="53.0" layoutY="9.0" />
+            <Button fx:id="supplier_button" layoutX="220.0" layoutY="9.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="35.0" />
+            <ImageView fx:id="searchImageView" fitHeight="20.0" fitWidth="30.0" layoutX="223.0" layoutY="13.0" pickOnBounds="true">
+                <image>
+                    <Image url="@../../kinadaImage/loupe.png" />
+                </image>
+            </ImageView>
+        </children>
+</AnchorPane>

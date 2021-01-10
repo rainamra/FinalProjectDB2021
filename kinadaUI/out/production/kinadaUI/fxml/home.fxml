@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.homeController">
+   <right>
+      <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #fef7e6;" BorderPane.alignment="CENTER">
+         <children>
+            <TabPane layoutX="13.0" layoutY="51.0" prefHeight="335.0" prefWidth="575.0" tabClosingPolicy="UNAVAILABLE">
+                <tabs>
+                  <Tab text="New Order">
+                      <content>
+                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+                             <children>
+                                 <Label layoutX="14.0" layoutY="23.0" text="Customer Name:" />
+                                 <Label layoutX="14.0" layoutY="77.0" text="Phone Number:" />
+                                 <Label layoutX="14.0" layoutY="131.0" text="Address:" />
+                                 <Label layoutX="14.0" layoutY="185.0" text="Order:" />
+                                 <TextField fx:id="cust_phone" layoutX="14.0" layoutY="95.0" prefHeight="28.0" prefWidth="150.0" />
+                                 <TextField fx:id="cust_address" layoutX="14.0" layoutY="152.0" prefHeight="28.0" prefWidth="150.0" />
+                                 <TextField fx:id="cust_name" layoutX="14.0" layoutY="40.0" prefHeight="28.0" prefWidth="150.0" />
+                                 <ComboBox fx:id="cust_order" layoutX="14.0" layoutY="202.0" prefWidth="150.0" />
+                                 <Label layoutX="14.0" layoutY="239.0" text="Quantity:" />
+                                 <Spinner fx:id="item_qty" layoutX="14.0" layoutY="256.0" prefHeight="27.0" prefWidth="56.0" />
+                                 <Button fx:id="confirm_button" layoutX="334.0" layoutY="256.0" mnemonicParsing="false" onAction="#confirmButtonOnAction" prefHeight="27.0" prefWidth="109.0" text="Confirm Order" />
+                                 <Button fx:id="add_button" layoutX="172.0" layoutY="256.0" mnemonicParsing="false" onAction="#addButtonOnAction" prefHeight="27.0" prefWidth="87.0" text="Add Order" />
+                                 <TableView fx:id="addOrderTable" layoutX="172.0" layoutY="27.0" prefHeight="209.0" prefWidth="350.0">
+                                     <columns>
+                                         <TableColumn fx:id="item_name" prefWidth="125.0" text="Description" />
+                                         <TableColumn fx:id="item_price" prefWidth="86.5" text="Price" />
+                                         <TableColumn fx:id="itemQty" prefWidth="47.0" text="Qty." />
+                                         <TableColumn fx:id="subtotal" prefWidth="90.5" text="Total" />
+                                     </columns>
+                                 </TableView>
+                                 <Text layoutX="451.0" layoutY="274.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total :" wrappingWidth="48.24761962890625" />
+                                 <Label fx:id="orderMessageLabel" layoutX="191.0" layoutY="231.0" />
+                                 <Label fx:id="totalPriceLabel" layoutX="499.0" layoutY="261.0" prefHeight="17.0" prefWidth="52.0" />
+                                 <Button fx:id="delete_button" layoutX="266.0" layoutY="256.0" mnemonicParsing="false" onAction="#deleteButtonOnAction" prefHeight="27.0" prefWidth="63.0" text="Delete" />
+                              <ComboBox fx:id="paymentCtgry" layoutX="73.0" layoutY="256.0" prefHeight="27.0" prefWidth="89.0" />
+                              <Label layoutX="73.0" layoutY="240.0" text="Payment:" />
+                             </children>
+                         </AnchorPane>
+                     </content>
+                  </Tab>
+                <Tab text="Invoice">
+                    <fx:include fx:id="invoiceTabPage" source="invoiceTab.fxml" />
+                  <content>
+                  </content>
+                </Tab>
+                  <Tab text="Supplier">
+                      <fx:include fx:id="supplierTabPage" source="supplierTab.fxml" />
+                     <content>
+                     </content>
+                  </Tab>
+                  <Tab text="Insight">
+                      <fx:include fx:id="insightTabPage" source="insightTab.fxml" />
+                     <content>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+            <Text layoutX="21.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="KINADA MANAGEMENT SYSTEM">
+               <font>
+                  <Font name="Cocogoose Classic Trial Medium" size="20.0" />
+               </font>
+            </Text>
+         </children></AnchorPane>
+   </right>
+   <left>
+      <AnchorPane prefHeight="400.0" prefWidth="200.0" style="-fx-background-color: #213f97;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="staff_avatar" fitHeight="120.0" fitWidth="120.0" layoutX="40.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@../../kinadaImage/staff.png" />
+                </image>
+            </ImageView>
+            <Text fill="#fffefe" layoutX="15.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID       :" />
+            <Text fill="#fff9f9" layoutX="15.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name :" />
+            <Label fx:id="staff_id" layoutX="64.0" layoutY="200.0" prefHeight="17.0" prefWidth="132.0" textFill="#fff9f9" />
+            <Label fx:id="staff_name" layoutX="64.0" layoutY="230.0" prefHeight="17.0" prefWidth="132.0" textFill="#fff9f9" />
+            <Text fill="#fffefe" layoutX="15.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email  :" wrappingWidth="46.703125" />
+            <Label fx:id="staff_email" layoutX="64.0" layoutY="259.0" prefHeight="17.0" prefWidth="132.0" textFill="#fff9f9" />
+         </children></AnchorPane>
+   </left>
+   <top>
+      <MenuBar prefHeight="29.0" prefWidth="210.0" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="profile_button" mnemonicParsing="false" onAction="#profileButtonOnAction" text="Profile" />
+                  <MenuItem fx:id="logOut_button" mnemonicParsing="false" onAction="#logOutButtonOnAction" text="Log Out" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem fx:id="aboutButton" mnemonicParsing="false" onAction="#aboutButtonOnAction" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>

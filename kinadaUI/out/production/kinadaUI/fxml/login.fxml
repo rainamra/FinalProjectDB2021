@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.loginController">
+   <right>
+      <AnchorPane prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: #213f97;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="lockImageView" fitHeight="100.0" fitWidth="100.0" layoutX="101.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../kinadaImage/locked.PNG" />
+               </image></ImageView>
+            <Button fx:id="loginButton" centerShape="false" layoutX="28.0" layoutY="290.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="27.0" prefWidth="100.0" style="-fx-background-color: #ffffff#ffffff;" text="Login">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button fx:id="cancelButton" layoutX="172.0" layoutY="290.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="27.0" prefWidth="100.0" style="-fx-background-color: #ffffff#ffffff;" text="Cancel">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button fx:id="registerButton" layoutX="27.0" layoutY="334.0" mnemonicParsing="false" onAction="#registerButtonOnAction" prefHeight="27.0" prefWidth="248.0" style="-fx-background-color: #ffffff#ffffff;" text="Register">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Label layoutX="28.0" layoutY="179.0" text="Staff ID    :" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label layoutX="27.0" layoutY="217.0" text="Password : " textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <TextField fx:id="login_id" layoutX="105.0" layoutY="175.0" />
+            <Label fx:id="loginMessageLabel" layoutX="28.0" layoutY="249.0" textFill="WHITE">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="28.0" layoutY="151.0" prefHeight="18.0" prefWidth="257.0" text="Click register for new staff." textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="28.0" layoutY="126.0" prefHeight="23.0" prefWidth="215.0" text="Welcome!" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="login_pass" layoutX="105.0" layoutY="213.0" />
+         </children>
+      </AnchorPane>
+   </right>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="brandingImageView" fitHeight="400.0" fitWidth="300.0">
+               <image>
+                  <Image url="@../../kinadaImage/login.PNG" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

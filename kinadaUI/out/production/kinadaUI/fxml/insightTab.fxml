@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="400.0" prefWidth="525.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.insightTabController">
+   <children>
+      <ScrollPane layoutY="20.0" prefHeight="255.0" prefWidth="525.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="443.0" prefWidth="505.0">
+               <children>
+                  <TableView fx:id="insightTableView" prefHeight="443.0" prefWidth="525.0">
+                    <columns>
+                      <TableColumn fx:id="monthColumn" prefWidth="136.0" text="Month" />
+                      <TableColumn fx:id="incomeColumn" prefWidth="174.0" text="Income" />
+                        <TableColumn fx:id="revenueColumn" prefWidth="214.0" text="Revenue" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

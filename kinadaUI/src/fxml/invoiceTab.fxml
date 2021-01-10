@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="255.0" prefWidth="622.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.invoiceTabController">
+    <children>
+            <ScrollPane layoutX="71.0" layoutY="47.0" prefHeight="458.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="47.0">
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="800.0" prefWidth="800.0">
+                        <children>
+                  <TableView fx:id="invoiceTableView" layoutY="-6.0" onMouseClicked="#toInvoiceDetail" onMousePressed="#toInvoiceDetail" prefHeight="800.0" prefWidth="800.0">
+                    <columns>
+                      <TableColumn fx:id="orderID" prefWidth="59.0" text="Order ID" />
+                      <TableColumn fx:id="date" prefWidth="91.48804092407227" text="Date" />
+                        <TableColumn fx:id="name" prefWidth="66.99205017089844" text="Customer" />
+                        <TableColumn fx:id="address" prefWidth="99.6397705078125" text="Address" />
+                        <TableColumn fx:id="totalPrice" prefWidth="72.81997680664062" text="Total Price" />
+                        <TableColumn fx:id="status" minWidth="-Infinity" prefWidth="300.0" text="Status">
+                           <columns>
+                              <TableColumn fx:id="orderStatus" prefWidth="170.3602294921875" text="Order" />
+                              <TableColumn fx:id="paymentStatus" prefWidth="93.13970947265625" text="Payment" />
+                           </columns>
+                        </TableColumn>
+                        <TableColumn fx:id="updateStatus" minWidth="0.0" prefWidth="144.50006103515625" text="Action" />
+                    </columns>
+                  </TableView>
+                        </children>
+                    </AnchorPane>
+                </content>
+            </ScrollPane>
+            <Label layoutY="14.0" text="Search:" />
+        <Button layoutX="220.0" layoutY="9.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="35.0" />
+        <ImageView fx:id="searchImageView2" fitHeight="20.0" fitWidth="30.0" layoutX="223.0" layoutY="13.0" pickOnBounds="true">
+            <image>
+                    <Image url="@../../kinadaImage/loupe.png" />
+            </image>
+        </ImageView>
+      <TextField fx:id="searchInvoiceTF" layoutX="53.0" layoutY="9.0" onAction="#searchInvoice" />
+      <Button fx:id="deleteButton" layoutX="467.0" layoutY="9.0" mnemonicParsing="false" onAction="#deleteButtonOnAction" text="Delete Order" />
+    </children>
+</AnchorPane>

@@ -9,7 +9,7 @@ public class DatabaseConnection {
         String url = "jdbc:mysql://localhost:3306/kinada_local?"
                 + "zeroDateTimeBehavior=CONVERT_TO_NULL&serverTimezone=UTC ";
         String user = "root";
-        String password = "";
+        String password = "rain2904";
         if (con == null) {
             try {
                 Class.forName("com.mysql.cj.jdbc.Driver");
